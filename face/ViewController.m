@@ -54,6 +54,14 @@
                  // - requires user_birthday permission
                  userInfo = [userInfo stringByAppendingString:[NSString stringWithFormat:@"Birthday: %@\n\n", user.birthday]];
                  
+                 // Example: typed access, (email)
+                 // - requires user_email permission
+                 userInfo = [userInfo stringByAppendingString:[NSString stringWithFormat:@"Email: %@\n\n", [user objectForKey:@"email"]]];
+                 
+                 // Example: typed access, (education)
+                 // - requires user_education_history permission
+                 userInfo = [userInfo stringByAppendingString:[NSString stringWithFormat:@"Education: %@\n\n", [user objectForKey:@"education"]]];
+                 
                  // Example: partially typed access, to location field,
                  // name key (location)
                  // - requires user_location permission
